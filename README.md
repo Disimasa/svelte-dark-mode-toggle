@@ -1,58 +1,67 @@
-# create-svelte
+# svelte-dark-mode-toggle
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[![NPM](https://img.shields.io/npm/v/svelte-switch.svg)](https://www.npmjs.com/package/svelte-dark-mode-toggle)
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+SvelteJS component for toggling dark mode. There's just a button with cute animation without dark mode logic realization.
 
-## Creating a project
+![Dark mode toggle transition](./static/animation.gif)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Demo
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+[REPL Link](https://svelte.dev/repl/5773cfc57bf247778e49860874436b27?version=4.2.0)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Installation
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm install svelte-dark-mode-toggle
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
+Or with Yarn
 
 ```bash
-npm run package
+yarn add svelte-dark-mode-toggle
 ```
 
-To create a production version of your showcase app:
+## Usage
 
-```bash
-npm run build
+```svelte
+<script>
+  import DarkModeToggle from 'svelte-dark-mode-toggle'
+
+  let darkMode = false
+</script>
+
+<h1>The simpliest usage</h1>
+<DarkModeToggle {darkMode} on:click={() => darkMode = !darkMode}/>
+
 ```
 
-You can preview the production build with `npm run preview`.
+## API
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Props
 
-## Publishing
+| Name                | Type                         | Default Value                   | Description                               |
+| ------------------- | ---------------------------- | ------------------------------- | ----------------------------------------- |
+| darkMode            | boolean                      |                                 | Current mode state                        |
+| size                | string                       | 28px                            | Size of component (passed to svg)         | 
+| title               | string                       | Toggle dark mode                | Рint on hover (passed to button)          |
+| lightModeColor   | string                       | #000000                              | Color of sun                                |
+| lightModeHover | string                       | #292828 | Color of sun of hover    |
+| darkModeColor           | string                       | #FFFFFF                          | Color of the moon.                        |
+| darkModeHover            | string                       | #e6e6e6                          | Color of the moon on hover               |
+| animationDuration     | string                       | .25s               | transition-duration value          |
+| animationDelay              | string                       | .25s               | transition-delay value for moon transformation         |
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+### Events
 
-To publish your library to [npm](https://www.npmjs.com):
+| Event Name | Description          |
+| ---------- | -------------------- |
+| click      | Classic click event  |
 
-```bash
-npm publish
-```
+## License
+
+MIT
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
