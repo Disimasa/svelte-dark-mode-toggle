@@ -5,9 +5,9 @@
   export let darkModeHover = '#e6e6e6'
   export let animationDuration = '.25s'
   export let animationDelay = '.25s'
-  export let darkMode
-  export let size = 28
+  export let size = '28px'
   export let title = 'Toggle dark mode'
+  export let darkMode
 </script>
 
 <button class="theme-toggle"
