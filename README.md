@@ -44,7 +44,7 @@ yarn add svelte-dark-mode-toggle
 | ------------------- | ---------------------------- | ------------------------------- | ----------------------------------------- |
 | darkMode            | boolean                      |                                 | Current mode state                        |
 | size                | string                       | 28px                            | Size of component (passed to svg)         | 
-| title               | string                       | Toggle dark mode                | Рint on hover (passed to button)          |
+| title               | string                       | Toggle dark mode                | Hint on hover (passed to button)          |
 | lightModeColor   | string                       | #000000                              | Color of sun                                |
 | lightModeHover | string                       | #292828 | Color of sun of hover    |
 | darkModeColor           | string                       | #FFFFFF                          | Color of the moon.                        |
