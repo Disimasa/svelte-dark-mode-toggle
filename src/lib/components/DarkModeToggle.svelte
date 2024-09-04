@@ -10,7 +10,7 @@
   export let darkMode
 </script>
 
-<button class="theme-toggle"
+<button class="theme-toggle {$$props.class}"
         {title}
         style='--hoverColor: {darkMode ? darkModeHover : lightModeHover};
           --animationDuration: {animationDuration};
